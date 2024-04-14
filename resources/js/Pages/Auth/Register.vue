@@ -7,7 +7,7 @@ import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
 
 const form = useForm({
-    name: '',
+    nickname: '',
     email: '',
     password: '',
     password_confirmation: '',
@@ -26,23 +26,23 @@ const submit = () => {
 
         <form @submit.prevent="submit">
             <div>
-                <InputLabel for="name" value="Name" />
+                <InputLabel for="nickname" value="닉네임" />
 
                 <TextInput
-                    id="name"
+                    id="nickname"
                     type="text"
                     class="mt-1 block w-full"
-                    v-model="form.name"
+                    v-model="form.nickname"
                     required
                     autofocus
-                    autocomplete="name"
+                    autocomplete="nickname"
                 />
 
-                <InputError class="mt-2" :message="form.errors.name" />
+                <InputError class="mt-2" :message="form.errors.nickname" />
             </div>
 
             <div class="mt-4">
-                <InputLabel for="email" value="Email" />
+                <InputLabel for="email" value="이메일" />
 
                 <TextInput
                     id="email"
@@ -57,7 +57,7 @@ const submit = () => {
             </div>
 
             <div class="mt-4">
-                <InputLabel for="password" value="Password" />
+                <InputLabel for="password" value="비밀번호" />
 
                 <TextInput
                     id="password"
@@ -72,7 +72,7 @@ const submit = () => {
             </div>
 
             <div class="mt-4">
-                <InputLabel for="password_confirmation" value="Confirm Password" />
+                <InputLabel for="password_confirmation" value="비밀번호 확인" />
 
                 <TextInput
                     id="password_confirmation"
@@ -91,7 +91,7 @@ const submit = () => {
                     :href="route('login')"
                     class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
-                    Already registered?
+                    이미 가입했나요?
                 </Link>
 
                 <PrimaryButton class="ms-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
