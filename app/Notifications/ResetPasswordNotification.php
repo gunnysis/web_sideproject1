@@ -42,7 +42,7 @@ class ResetPasswordNotification extends Notification
             ->subject(Lang::get('passwords.Reset Password Notification'))
             ->line(Lang::get('passwords.Reset Password Info'))
             ->action(Lang::get('passwords.Notification Action'), $this->resetUrl($notifiable))
-            ->salutation('감사합니다.');
+            ;
     }
 
     /**
