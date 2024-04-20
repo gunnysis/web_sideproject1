@@ -86,7 +86,7 @@ const form = useForm({
             </div>
 
             <div class="flex items-center gap-4">
-                <PrimaryButton :disabled="form.processing">회원정보 수정</PrimaryButton>
+                <PrimaryButton :disabled="form.processing">회원 정보 수정</PrimaryButton>
 
                 <Transition
                     enter-active-class="transition ease-in-out"
