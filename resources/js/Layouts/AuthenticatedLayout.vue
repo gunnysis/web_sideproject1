@@ -30,7 +30,7 @@ const showingNavigationDropdown = ref(false);
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    회원 정보
+                                    메인 페이지
                                 </NavLink>
                             </div>
                         </div>
@@ -64,7 +64,8 @@ const showingNavigationDropdown = ref(false);
                                     </template>
 
                                     <template #content>
-                                        <DropdownLink :href="route('profile.edit')"> 회원 정보 </DropdownLink>
+                                        <DropdownLink :href="route('profile.edit')">회원 정보</DropdownLink>
+                                        <DropdownLink :href="route('revelation.create')">나의 비밀정보</DropdownLink>
                                         <DropdownLink :href="route('logout')" method="post" as="button">
                                             로그아웃
                                         </DropdownLink>
@@ -113,7 +114,7 @@ const showingNavigationDropdown = ref(false);
                 >
                     <div class="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            회원 정보
+                            메인 페이지
                         </ResponsiveNavLink>
                     </div>
 
@@ -127,7 +128,8 @@ const showingNavigationDropdown = ref(false);
                         </div>
 
                         <div class="mt-3 space-y-1">
-                            <ResponsiveNavLink :href="route('profile.edit')"> 회원 정보 </ResponsiveNavLink>
+                            <ResponsiveNavLink :href="route('profile.edit')">회원 정보</ResponsiveNavLink>
+                            <ResponsiveNavLink :href="route('revelation.create')">나의 비밀정보</ResponsiveNavLink>
                             <ResponsiveNavLink :href="route('logout')" method="post" as="button">
                                 로그아웃
                             </ResponsiveNavLink>
