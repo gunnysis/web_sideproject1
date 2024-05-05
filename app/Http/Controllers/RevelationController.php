@@ -62,36 +62,4 @@ class RevelationController extends Controller
         // Return a success response
         return response()->json(['message' => $message], 200);
     }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Revelation $revelation)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Revelation $revelation)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateRevelationRequest $request, Revelation $revelation)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Revelation $revelation)
-    {
-        //
-    }
 }

@@ -86,7 +86,7 @@ const genderOptions = [
 ];
 
 function submitForm() {
-    axios.post('/revelation/store', form)
+    axios.post('/revelation/account/store', form)
         .then(response => {
             alert('프로필 저장 성공!');
         })
