@@ -4,7 +4,7 @@
     <AuthenticatedLayout>
 
         <template #header>
-            <Link href="/revelation/post" class="font-semibold text-xl text-gray-800 leading-tight mx-3">비밀글 작성</Link>
+            <Link href="/revelation/post" class="font-semibold text-xl text-gray-800 leading-tight mx-3">비밀글 메인</Link>
             <span class="font-semibold text-xl text-gray-800 leading-tight mx-3">비밀글 작성</span>
         </template>
 
@@ -26,6 +26,8 @@
                                         class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                                     <option value="사회생활">사회생활</option>
                                     <option value="가족">가족</option>
+                                    <option value="연애">연애</option>
+                                    <option value="성문화">성문화</option>
                                     <option value="기타">기타</option>
                                 </select>
                             </div>
@@ -59,11 +61,11 @@
     import { Head } from '@inertiajs/inertia-vue3';
     import { Link } from '@inertiajs/inertia-vue3';
 
-    // Define a reactive form object
+    // Define a reactive form object and default values
     const form = reactive({
-        kind: '사회생활',  // Initial kind value
-        title: '',         // Initial title value
-        content: ''        // Initial content value
+        kind: '사회생활',
+        title: '',
+        content: ''
     });
 
     // Function to handle form submission

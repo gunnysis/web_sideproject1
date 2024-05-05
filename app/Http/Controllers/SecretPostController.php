@@ -14,7 +14,10 @@ class SecretPostController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Revelation/Post/Index');
+        $secretPost = SecretPost::where('user_id', Auth::id())
+            ->select('kind','title','created_at')
+            ->get();
+        return Inertia::render('Revelation/Post/Index',['secretPost' => $secretPost]);
     }
 
     /**
